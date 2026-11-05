@@ -98,3 +98,19 @@ https://github.com/heayounhwang/young
 터미널 명령과 출력 결과, 권한 변경 전후 비교,
 Docker 운영 로그, 스크린샷, 트러블슈팅 2건은
 최종 제출 전 추가할 예정입니다.
+### 트러블슈팅 1: NGINX favicon.ico 404
+
+- 문제: 웹페이지 접속 후 Docker 로그에 `GET /favicon.ico` 요청이 404로 기록됨.
+- 원인 가설: 웹페이지의 아이콘 파일이 서버에 존재하지 않음.
+- 확인: `docker logs codyssey-web`에서 favicon.ico 파일을 찾을 수 없다는 오류와 404 응답을 확인함. 반면 메인 페이지는 HTTP 200으로 정상 응답함.
+- 해결/대안: 웹페이지 자체는 정상 작동하므로 실습 진행에는 영향이 없음. 향후 favicon.ico 파일을 추가하거나 아이콘 요청을 별도로 처리할 수 있음.
+
+
+### 트러블슈팅 2: Ubuntu 컨테이너 명령어 오류
+
+- 문제: Ubuntu 컨테이너에서 `Hello Codyssey`를 명령어로 입력하자 `bash: Hello: command not found` 오류가 발생함.
+- 원인 가설: 출력하려는 문자열을 실행 명령어로 잘못 입력함.
+- 확인: Bash는 `Hello`를 명령어로 인식했지만 해당 명령어가 존재하지 않았음.
+- 해결: `echo "Hello Codyssey" > /home/practice/test.txt`로 문자열을 파일에 기록하고, `cat /home/practice/test.txt`로 내용을 확인함.
+- 결과: `Hello Codyssey`가 정상 출력됨.
+
