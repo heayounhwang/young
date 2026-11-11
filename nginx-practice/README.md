@@ -5,11 +5,11 @@
 Linux CLI, Docker, Git/GitHub를 활용하여 재현 가능한 개발 환경을 구축하고 검증하는 프로젝트입니다.
 
 ## 2. 개발 환경
-- OS: Windows + WSL2 Ubuntu
+- OS: Windows + WSL2 Ubuntu 26.04.1 LTS
 - Shell: Bash
 - Terminal: Windows Terminal
-- Container Engine: Docker Desktop
-- Git: GitHub 원격 저장소 연결
+- Container Engine: Docker Desktop (Docker 29.9.2)
+- Git: GitHub 원격 저장소 연결(Git 2.53.0)
 - Git Branch: main
 
 ## 3. 수행 체크리스트
@@ -114,3 +114,18 @@ Docker 운영 로그, 스크린샷, 트러블슈팅 2건은
 - 해결: `echo "Hello Codyssey" > /home/practice/test.txt`로 문자열을 파일에 기록하고, `cat /home/practice/test.txt`로 내용을 확인함.
 - 결과: `Hello Codyssey`가 정상 출력됨.
 
+## 9. 실습 증거자료
+
+![파일 및 디렉터리 권한 변경](evidence/01_permissions_before_after.png)
+![Docker 엔진 점검](evidence/02_docker_info_running.png)
+![hello-world 실행](evidence/03_docker_hello_world.png)
+![Ubuntu 컨테이너와 권한 실습](evidence/04_ubuntu_container_and_permissions.png)
+![Dockerfile 이미지 빌드](evidence/05_dockerfile_build_success.png)
+![8080 포트 브라우저 접속](evidence/06_port_8080_browser.png)
+![Docker 컨테이너 운영 명령](evidence/07_docker_container_commands.png)
+![바인드 마운트와 볼륨 영속성](evidence/08_bind_mount_and_volume_persistence.png)
+![Docker 리소스와 Linux 파일 조작](evidence/09_docker_stats_and_linux_copy_move_remove.png)
+![Git 파일 스테이징](evidence/10_git_files_staged.png)
+![Git commit 및 push](evidence/11_git_commit_push_success.png)
+![GitHub 저장소 파일 확인](evidence/12_github_repo_files.png)
+![VSCode 소스 제어](evidence/13_vscode_source_control.png)
